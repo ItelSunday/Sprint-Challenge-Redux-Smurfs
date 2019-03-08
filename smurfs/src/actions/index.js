@@ -18,6 +18,9 @@ import axios from 'axios';
 
 export const FETCH_SMURFS = 'FETCH_SMURF';
 export const ADD_SMURF = 'ADD_SMURF';
+export const UPDATE_SMURF = 'ADD_SMURF';
+export const DELETE_SMURF = 'ADD_SMURF';
+
 
 const url = 'http://localhost:3333/smurfs';
 
