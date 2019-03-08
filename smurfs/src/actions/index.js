@@ -44,3 +44,15 @@ export const addSmurf=(smurf) => dispatch => {
   })
 
 }
+
+export const deleteSmurf=(smurf) => dispatch => {
+  return axios.post(`${url}`, smurf)
+  .then(res => {
+    dispatch({type: ADD_SMURF, payload: res.data});
+  })
+  .catch(err => {
+    console.log(err);
+  })
+
+}
+

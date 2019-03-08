@@ -33,8 +33,8 @@ class SmurfForm extends Component {
 
     render() {
         return (
-            <div>
-                 <form onSubmit= {this.submitHandler}  > 
+    <div>
+        <form onSubmit= {this.submitHandler}  > 
           <input
             type="text"
             name="name"
@@ -62,7 +62,7 @@ class SmurfForm extends Component {
 
           <button>Add Smurf</button>
         </form>
-            </div>
+    </div>
         )
     } 
 }

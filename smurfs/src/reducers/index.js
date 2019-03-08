@@ -1,4 +1,4 @@
-import {FETCH_SMURFS, ADD_SMURF} from '../actions';
+import {FETCH_SMURFS, ADD_SMURF, UPDATE_SMURF, DELETE_SMURF} from '../actions';
 
 const initialState = {
   smurfs: [],
@@ -21,16 +21,16 @@ export default (state=initialState, action) => {
       smurfs: action.payload,
       addingSmurf: false
     }
-    // case UPDATE_SMURFS:
-    // return {
-    //   smurfs: action.payload,
-    //   fetchingSmurfs: false
-    // }
-    // case DELETE_SMURF:
-    // return {
-    //   smurfs: action.payload,
-    //   addingSmurf: false
-    // }
+    case UPDATE_SMURF:
+    return {
+      smurfs: action.payload,
+      fetchingSmurfs: false
+    }
+    case DELETE_SMURF:
+    return {
+      smurfs: action.payload,
+      addingSmurf: false
+    }
     
 
     default:
