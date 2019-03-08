@@ -1,3 +1,29 @@
+import {FETCH_SMURFS, ADD_SMURF} from '../actions';
+
+import reducers from '../reducers'
+
+const initialState = {
+  smurfs: []
+};
+
+const reducer = (state=initialState, action) => {
+  switch (action.type) {
+    case FETCH_SMURFS:
+    return {
+      smurfs: action.payload
+    }
+    case ADD_SMURF:
+    return {
+      smurfs: action.payload
+    }
+    default:
+    return state;
+    
+  }
+}
+
+export default reducers;
+
 /*
   Be sure to import in all of the action types from `../actions`
 */
