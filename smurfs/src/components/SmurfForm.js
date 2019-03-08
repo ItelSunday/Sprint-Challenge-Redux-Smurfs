@@ -18,12 +18,23 @@ class SmurfForm extends Component {
 
     submitHandler = e => {
         e.preventDefault();
+        const smurf= {
+            name: this.state.name,
+            age: this.state.age,
+            height: this.state.height
+        }
+        this.props.addSmurf(smurf);
+        this.setState({
+            name: '',
+            age: '',
+            height: ''
+        })
     }
 
     render() {
         return (
             <div>
-                 <form  > 
+                 <form onSubmit= {this.submitHandler}  > 
           <input
             type="text"
             name="name"

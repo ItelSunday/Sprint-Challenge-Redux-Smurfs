@@ -19,10 +19,10 @@ import axios from 'axios';
 export const FETCH_SMURFS = 'FETCH_SMURF';
 export const ADD_SMURF = 'ADD_SMURF';
 
-const url = 'http://localhost:3333';
+const url = 'http://localhost:3333/smurfs';
 
 export const getSmurfs=() => dispatch => {
-  return axios.get(`${url}/api/smurfs`)
+  return axios.get(`${url}`)
   .then(res => {
     dispatch({type: FETCH_SMURFS, payload: res.data});
   })
@@ -32,7 +32,7 @@ export const getSmurfs=() => dispatch => {
 }
 
 export const addSmurf=(smurf) => dispatch => {
-  return axios.post(`${url}/api/smurfs`, smurf)
+  return axios.post(`${url}`, smurf)
   .then(res => {
     dispatch({type: ADD_SMURF, payload: res.data});
   })
