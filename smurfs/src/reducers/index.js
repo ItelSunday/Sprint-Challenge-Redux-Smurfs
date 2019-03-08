@@ -1,20 +1,25 @@
 import {FETCH_SMURFS, ADD_SMURF} from '../actions';
 
-import reducers from '../reducers'
-
 const initialState = {
-  smurfs: []
+  smurfs: [],
+  // fetchingSmurfs: false,
+  //  addingSmurf: false,
+  //  updatingSmurf: false,
+  //  deletingSmurf: false,
+   error: null
 };
 
-const reducer = (state=initialState, action) => {
+export default (state=initialState, action) => {
   switch (action.type) {
     case FETCH_SMURFS:
     return {
-      smurfs: action.payload
+      smurfs: action.payload,
+      fetchingSmurfs: false
     }
     case ADD_SMURF:
     return {
-      smurfs: action.payload
+      smurfs: action.payload,
+      addingSmurf: false
     }
     default:
     return state;
@@ -22,7 +27,7 @@ const reducer = (state=initialState, action) => {
   }
 }
 
-export default reducers;
+
 
 /*
   Be sure to import in all of the action types from `../actions`
