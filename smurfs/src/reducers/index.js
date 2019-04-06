@@ -1,3 +1,45 @@
+import {FETCH_SMURFS, ADD_SMURF, UPDATE_SMURF, DELETE_SMURF} from '../actions';
+
+const initialState = {
+  smurfs: [],
+  // fetchingSmurfs: false,
+  //  addingSmurf: false,
+  //  updatingSmurf: false,
+  //  deletingSmurf: false,
+   error: null
+};
+
+export default (state=initialState, action) => {
+  switch (action.type) {
+    case FETCH_SMURFS:
+    return {
+      smurfs: action.payload,
+      fetchingSmurfs: false
+    }
+    case ADD_SMURF:
+    return {
+      smurfs: action.payload,
+      addingSmurf: false
+    }
+    case UPDATE_SMURF:
+    return {
+      smurfs: action.payload,
+      fetchingSmurfs: false
+    }
+    case DELETE_SMURF:
+    return {
+      smurfs: action.payload,
+      addingSmurf: false
+    }
+    
+
+    default:
+    return state;
+  }
+}
+
+
+
 /*
   Be sure to import in all of the action types from `../actions`
 */
